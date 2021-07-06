@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-rows: 50px 1fr 30px;
+            grid-template-columns: 150px 1fr;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "sidebar footer footer";
+        }
+
+        header {
+            background-color: greenyellow;
+            border: solid 1px;
+            grid-area: header;
+        }
+        
+        nav {
+            background-color: tomato;
+            border: solid 1px;
+            grid-area: sidebar;
+        }
+        main {
+            background-color: skyblue;
+            border: solid 1px;
+            grid-area: main;
+        }
+        footer {
+            background-color: palevioletred;
+            border: solid 1px;
+            grid-area: footer;
+        }
+
+        .toolbar {
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>I am the header - my height is fixed</header>
+        <nav>sidebar here - my width is fixed</nav>
+        <main>
+            <div class="toolbar">
+                <div class="search-dropdown">search dropdown</div>
+                <div class="search-input">search input</div>
+                <div class="order-management-bar"><button></button></div>
+                <div class="shopping-cart">shopping cart</div>
+            </div>
+        </main>
+        <footer>footer - my height is fixed</footer>
+    </section>
+
+</body>
+
+</html>
